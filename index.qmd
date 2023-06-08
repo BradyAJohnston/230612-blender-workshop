@@ -1,6 +1,6 @@
 ---
 title: "Protein Visualisation Workshop"
-subtitle: "Protein visualisation workshop for MIPS, February 02-03, 2023."
+subtitle: "Protein visualisation workshop for Cambridge LMB, June 2023."
 ---
 
 ### Before the Workshop

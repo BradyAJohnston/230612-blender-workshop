@@ -1,3 +1,3 @@
-# 2023-02-02-blender-workshop
+# Cambridge Blender Workshop
 
-Website for Blender / Molecular Nodes workshop at MIPS in February, 2023.
+Website for Blender / Molecular Nodes workshop at Cambridge LMB in June, 2023.

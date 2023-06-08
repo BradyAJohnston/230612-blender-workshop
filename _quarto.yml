@@ -1,7 +1,9 @@
 project:
   type: website
   output-dir: docs
-
+filters:
+   - lightbox
+lightbox: auto
 website:
   title: "Protein Visualisation Workshop"
   sidebar:

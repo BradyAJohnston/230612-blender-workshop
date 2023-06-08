@@ -96,4 +96,4 @@ If you have troubled with installation, search through the [issues page](https:/
 
 # Start Importing Structures!
 
-Molecular nodes should be fully installed. See the [Getting Started](getting-started.md) page on how to start importing into Blender!
+Molecular nodes should be fully installed. See the [Getting Started](bradyajohnston.github.io/molecularNodes/getting-started.html) page on how to start importing into Blender!
