@@ -41,9 +41,3 @@ If you have access to more than one laptop, the most powerful laptop you can get
 5. Rendering Animations
 - Setting up camera
 - Render settings
-
-7. Showing some animations
-
-8. Recap of the first day / and what can be done
-
-9. More on molecular nodes and what people want to play around with. 
