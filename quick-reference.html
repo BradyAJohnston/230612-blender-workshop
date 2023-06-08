@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -191,11 +194,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#combine-2-different-styles" id="toc-combine-2-different-styles" class="nav-link active" data-scroll-target="#combine-2-different-styles">Combine 2 different Styles</a></li>
+  <li><a href="#styles" id="toc-styles" class="nav-link active" data-scroll-target="#styles">Styles</a>
+  <ul class="collapse">
+  <li><a href="#combine-2-different-styles" id="toc-combine-2-different-styles" class="nav-link" data-scroll-target="#combine-2-different-styles">Combine 2 different Styles</a></li>
+  <li><a href="#change-style-based-on-distance" id="toc-change-style-based-on-distance" class="nav-link" data-scroll-target="#change-style-based-on-distance">Change Style based on Distance</a></li>
+  </ul></li>
+  <li><a href="#color-by" id="toc-color-by" class="nav-link" data-scroll-target="#color-by">Color By</a>
+  <ul class="collapse">
   <li><a href="#manually-colour-chains" id="toc-manually-colour-chains" class="nav-link" data-scroll-target="#manually-colour-chains">Manually Colour Chains</a></li>
   <li><a href="#color-based-on-b-factor" id="toc-color-based-on-b-factor" class="nav-link" data-scroll-target="#color-based-on-b-factor">Color Based on <code>B-factor</code></a></li>
   <li><a href="#color-based-on-distance-to-an-object" id="toc-color-based-on-distance-to-an-object" class="nav-link" data-scroll-target="#color-based-on-distance-to-an-object">Color Based on Distance to an Object</a></li>
-  <li><a href="#change-style-based-on-distance" id="toc-change-style-based-on-distance" class="nav-link" data-scroll-target="#change-style-based-on-distance">Change Style based on Distance</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -220,41 +229,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>A quick reference document on how to do common operations inside of Molecular Nodes.</p>
+<section id="styles" class="level1">
+<h1>Styles</h1>
 <section id="combine-2-different-styles" class="level2">
 <h2 class="anchored" data-anchor-id="combine-2-different-styles">Combine 2 different Styles</h2>
 <p>Apply the separate styles in a separate branch of the node tree. Combine the resulting styles with <code>Join Geometry</code> node and use the result of this.</p>
-<p><img src="images/CleanShot 2023-06-08 at 11.51.26@2x.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 11.51.26@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/CleanShot 2023-06-08 at 11.51.26@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>A different selection can be used on each style, with the style only being applied to the given selection for each branch of the node tree.</p>
-<p><img src="images/CleanShot 2023-06-08 at 11.53.34@2x.png" class="img-fluid"></p>
-</section>
-<section id="manually-colour-chains" class="level2">
-<h2 class="anchored" data-anchor-id="manually-colour-chains">Manually Colour Chains</h2>
-<p>Cartoons and ribbons take their colours from the alpha carbon atoms. To colour secondary structure you can just set the colour of the carbon atoms using <code>MOL_color_set_common</code> which is in the starting node tree.</p>
-<p>To manually set the colours, there is a node that is generated uniquely for each structure based on the chain information. You can access via <em>Add Node using</em> <kbd>Shift + A</kbd>, <code>Molecular Nodes</code> -&gt; <code>Color</code> -&gt; <code>Color by Chains</code></p>
-<p><img src="images/CleanShot 2023-06-08 at 11.57.07@2x.png" class="img-fluid"></p>
-<p>If you wish to set the colour for every atom in the structure based on the chain number, then you instead of the <code>MOL_color_set_common</code> you can use the <code>MOL_color_set</code> node which is accessible via <code>Molecular Nodes -&gt; Color -&gt; Set Color</code>.</p>
-<p><img src="images/CleanShot 2023-06-08 at 11.57.24@2x.png" class="img-fluid"></p>
-</section>
-<section id="color-based-on-b-factor" class="level2">
-<h2 class="anchored" data-anchor-id="color-based-on-b-factor">Color Based on <code>B-factor</code></h2>
-<p>You can access any of the atomic attributes with the <code>Named Attribute</code> node and using the name of the attribute. In this example we set the colour of the structure by first mapping the <code>b_factor</code> attribute from <code>0..100</code> to <code>0..1</code>, then using this value from <code>0..1</code> to select a colour using a <code>ColorRamp</code> node. The output of this colour goes into the <code>MOL_color_set</code> node.</p>
-<p><img src="images/CleanShot 2023-06-08 at 12.04.22@2x.png" class="img-fluid"></p>
-<p><img src="images/CleanShot 2023-06-08 at 12.06.43@2x.png" class="img-fluid"></p>
-</section>
-<section id="color-based-on-distance-to-an-object" class="level2">
-<h2 class="anchored" data-anchor-id="color-based-on-distance-to-an-object">Color Based on Distance to an Object</h2>
-<p>You can measure the distance from each atom to a particular object using the <code>Object Info</code> node to get the information from an object (ensure you select <em>Relative</em> instead of <em>Original</em>) and this is used by the <code>Geometry Proximity</code> node. You can then use the <code>Map Range</code> node to convert the min and maximum distance over which to change the colour. The output of the <code>ColorRamp</code> node then sets the colors of the atoms.</p>
-<p><img src="images/CleanShot 2023-06-08 at 12.09.54@2x.png" class="img-fluid"></p>
-<p>The closer atoms to Suzanne are colored green, and the ones that are further away are colored red. As you move around Suzanne, the colors of the atoms are updated.</p>
-<p><img src="images/CleanShot 2023-06-08 at 12.10.37@2x.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 11.53.34@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/CleanShot 2023-06-08 at 11.53.34@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 </section>
 <section id="change-style-based-on-distance" class="level2">
 <h2 class="anchored" data-anchor-id="change-style-based-on-distance">Change Style based on Distance</h2>
 <p>The same distance measurements from the <code>Geometry Proximity</code> node can used in a <code>Compare</code> node to apply a distance cutoff. In this example the distance cutoff is <code>0.8</code> and the output is a boolean selection. This boolean selection can then be used for the surface style, and the inverse through the <em>Not</em> <code>Boolean Math</code> node is used for the ribbon style.</p>
-<p><img src="images/CleanShot 2023-06-08 at 12.20.35@2x.png" class="img-fluid"></p>
-<p><img src="images/CleanShot 2023-06-08 at 12.21.05@2x.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 12.20.35@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/CleanShot 2023-06-08 at 12.20.35@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 12.21.05@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/CleanShot 2023-06-08 at 12.21.05@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="color-by" class="level1">
+<h1>Color By</h1>
+<section id="manually-colour-chains" class="level2">
+<h2 class="anchored" data-anchor-id="manually-colour-chains">Manually Colour Chains</h2>
+<p>Cartoons and ribbons take their colours from the alpha carbon atoms. To colour secondary structure you can just set the colour of the carbon atoms using <code>MOL_color_set_common</code> which is in the starting node tree.</p>
+<p>To manually set the colours, there is a node that is generated uniquely for each structure based on the chain information. You can access via <em>Add Node using</em> <kbd>Shift + A</kbd>, <code>Molecular Nodes</code> -&gt; <code>Color</code> -&gt; <code>Color by Chains</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 11.57.07@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/CleanShot 2023-06-08 at 11.57.07@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>If you wish to set the colour for every atom in the structure based on the chain number, then you instead of the <code>MOL_color_set_common</code> you can use the <code>MOL_color_set</code> node which is accessible via <code>Molecular Nodes -&gt; Color -&gt; Set Color</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 11.57.24@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/CleanShot 2023-06-08 at 11.57.24@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="color-based-on-b-factor" class="level2">
+<h2 class="anchored" data-anchor-id="color-based-on-b-factor">Color Based on <code>B-factor</code></h2>
+<p>You can access any of the atomic attributes with the <code>Named Attribute</code> node and using the name of the attribute. In this example we set the colour of the structure by first mapping the <code>b_factor</code> attribute from <code>0..100</code> to <code>0..1</code>, then using this value from <code>0..1</code> to select a colour using a <code>ColorRamp</code> node. The output of this colour goes into the <code>MOL_color_set</code> node.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 12.04.22@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/CleanShot 2023-06-08 at 12.04.22@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 12.06.43@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/CleanShot 2023-06-08 at 12.06.43@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="color-based-on-distance-to-an-object" class="level2">
+<h2 class="anchored" data-anchor-id="color-based-on-distance-to-an-object">Color Based on Distance to an Object</h2>
+<p>You can measure the distance from each atom to a particular object using the <code>Object Info</code> node to get the information from an object (ensure you select <em>Relative</em> instead of <em>Original</em>) and this is used by the <code>Geometry Proximity</code> node. You can then use the <code>Map Range</code> node to convert the min and maximum distance over which to change the colour. The output of the <code>ColorRamp</code> node then sets the colors of the atoms.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 12.09.54@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/CleanShot 2023-06-08 at 12.09.54@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>The closer atoms to Suzanne are colored green, and the ones that are further away are colored red. As you move around Suzanne, the colors of the atoms are updated.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/CleanShot 2023-06-08 at 12.10.37@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/CleanShot 2023-06-08 at 12.10.37@2x.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -699,6 +754,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

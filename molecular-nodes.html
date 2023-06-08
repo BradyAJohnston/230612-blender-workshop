@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -236,7 +239,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Click on the <code>Scene Properties</code> panel, which will show the <code>MolecularNodes</code> panel, which has the buttons and options for downloading and importing protein structures.</li>
 <li>Enter your PDB ID of choice and click on download. This will import the molecular data into Blender, and you will see a new object appear in the Outliner (top right) under the MolecularNodes collection.</li>
 </ol>
-<p><img src="images/mn-panel-download-pdb.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/mn-panel-download-pdb.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/mn-panel-download-pdb.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>The structure is now imported into the scene. While initially the structure will appear as grey points, this is because Blender has a 3D view for working, then a Rendered view for actually rendering with calculated lighting.</p>
 </section>
 <section id="rendered-view" class="level2">
@@ -247,7 +254,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Change the render device from CPU to GPU if applicable. Some computers may not have GPU compute available.</li>
 <li>Change the view to rendered view, which will calculate the lighting for the scene and show all of the atoms.</li>
 </ol>
-<p><img src="images/mn-render-cycles.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/mn-render-cycles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/mn-render-cycles.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 </section>
 <section id="the-grid-and-axes" class="level2">
 <h2 class="anchored" data-anchor-id="the-grid-and-axes">The Grid and Axes</h2>
@@ -265,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
 <p>In the 3D viewport, much like in real life, there are 3 axes of possible movement and direction. Inside of Blender they are <code>X</code> <code>Y</code> and <code>Z</code>. <code>X</code> and <code>Y</code> form the flat grid that you see in the viewport, being coloured TODO red and green respectively, while <code>Z</code> is the blue vertical axis. These are labelled and highlighted on the axis widget, which is present in the top right corner of the viewport. This will rotate as you rotate the view, so it can always be used as a reference point.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/paste-E98C8D82.png" class="img-fluid figure-img"></p>
+<p><a href="images/paste-E98C8D82.png" class="lightbox" title="The axis widget, present in the 3D viewport." data-gallery="quarto-lightbox-gallery-3"><img src="images/paste-E98C8D82.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">The axis widget, present in the 3D viewport.</figcaption>
 </figure>
 </div>
@@ -277,9 +288,17 @@ ul.task-list li input[type="checkbox"] {
 <p>Think of it as creating a set of rules for the computer to follow. You define the rules, and the computer can follow those same rules, even if you start with a different data set.</p>
 </blockquote>
 <p>Combining multiple different nodes you can create protein models and complex 3D scenes. In the example below, there is a node tree which should be present on every new structure imported via MolecularNodes. The atoms and bonds are passed in from the left, the atoms are given a colour based on their element and their <code>chain_id</code>, and then the atoms are styled as atoms, scaling the atom radii to <code>1.00</code>.</p>
-<p><img src="images/mn-gn-workspace.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/mn-gn-workspace.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/mn-gn-workspace.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>The starting style <code>MOL_style_atoms_cycles</code> is only visible via inside of the Cycles render engine. You can add other styles manipulate the data through other nodes, by adding them with <kbd>Shift</kbd> + <kbd>A</kbd> and navigating to the MolecularNodes panel at the bottom. There are several categories of nodes for different animations and styles. You can add the <code>Ribbon Protein</code> node, which will create a ribbon representation based on the alpha carbons in the structure. If there is not colour in the structure, ensure that the node has a material <code>MOL_atomic_material</code> at the bottom of the node.</p>
-<p><img src="images/mn-gn-style-ribbon.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/mn-gn-style-ribbon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/mn-gn-style-ribbon.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>The data flows through the node graph from left to right. There should always be one input, which is the atomic data that is stored in the 3D mesh of the atoms and bonds. There should also be only one output, which is the final geometry that has been created throughout the node graph.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -312,13 +331,13 @@ ul.task-list li input[type="checkbox"] {
 <p>There are many ways to quickly create animations inside of Blender and MolecularNodes. One such way is to use the <code>Wiggle</code> node inside of MolecularNodes. This wiggles the amino acid side chains, based on their experimentally-determined B-factor, to give life to the structure. Crystral structures are ultimately static snapshots of a dynamic system, and this is a quick way to bring some of those dynamics back to the structure.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/mn-wiggle-example.gif" class="img-fluid figure-img" alt="A gif showing amino acids wiggling and moving about as part of a protein cystral structure. Their movement is scaled based on their experimentally determined B-factor."></p>
+<p><a href="images/mn-wiggle-example.gif" class="lightbox" title="Quickly adding life to a crystal structure." data-gallery="quarto-lightbox-gallery-6"><img src="images/mn-wiggle-example.gif" class="img-fluid figure-img" alt="A gif showing amino acids wiggling and moving about as part of a protein cystral structure. Their movement is scaled based on their experimentally determined B-factor."></a></p>
 <figcaption class="figure-caption">Quickly adding life to a crystal structure.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/mn-wiggle-nodes.png" class="img-fluid figure-img" alt="A screenshot of some geometry nodes inside of Blender. The major nodes pictured are 'MOL_style_colour', 'MOL_animate_res_wiggle' and 'MOL_style_ball_and_stick' which result in an animation of amino acids wiggling about inside of a protein structure."></p>
+<p><a href="images/mn-wiggle-nodes.png" class="lightbox" title="The nodes used in the wiggle animation above." data-gallery="quarto-lightbox-gallery-7"><img src="images/mn-wiggle-nodes.png" class="img-fluid figure-img" alt="A screenshot of some geometry nodes inside of Blender. The major nodes pictured are 'MOL_style_colour', 'MOL_animate_res_wiggle' and 'MOL_style_ball_and_stick' which result in an animation of amino acids wiggling about inside of a protein structure."></a></p>
 <figcaption class="figure-caption">The nodes used in the wiggle animation above.</figcaption>
 </figure>
 </div>
@@ -768,6 +787,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":true});</script>
 
 
 

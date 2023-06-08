@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -229,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="the-3d-viewport">The 3D Viewport</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/paste-820DB89C.png" class="img-fluid figure-img" alt="A screenshot of Blender, showing the default starting scene, demonstrating the 3D viewport with a single object in the centre, the default cube."></p>
+<p><a href="images/paste-820DB89C.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The starting 3D viewport, which you are greeted with when you start Blender."><img src="images/paste-820DB89C.png" class="img-fluid figure-img" alt="A screenshot of Blender, showing the default starting scene, demonstrating the 3D viewport with a single object in the centre, the default cube."></a></p>
 <figcaption class="figure-caption">The starting 3D viewport, which you are greeted with when you start Blender.</figcaption>
 </figure>
 </div>
@@ -249,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
 <p>In the 3D viewport, much like in real life, there are 3 axes of possible movement and direction. Inside of Blender they are <code>X</code> <code>Y</code> and <code>Z</code>. <code>X</code> and <code>Y</code> form the flat grid that you see in the viewport, being coloured TODO red and green respectively, while <code>Z</code> is the blue vertical axis. These are labelled and highlighted on the axis widget, which is present in the top right corner of the viewport. This will rotate as you rotate the view, so it can always be used as a reference point.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/paste-E98C8D82.png" class="img-fluid figure-img"></p>
+<p><a href="images/paste-E98C8D82.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="The axis widget, present in the 3D viewport."><img src="images/paste-E98C8D82.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">The axis widget, present in the 3D viewport.</figcaption>
 </figure>
 </div>
@@ -262,7 +265,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Think of it as creating a set of rules for the computer to follow. You define the rules, and the computer can follow those same rules, even if you start with a different data set.</p>
 </blockquote>
 <p>Combining multiple different nodes you can create protein models and complex 3D scenes.</p>
-<p><img src="images/gn-node-graph.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/gn-node-graph.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/gn-node-graph.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 </section>
 <section id="shader-editor" class="level3">
 <h3 class="anchored" data-anchor-id="shader-editor">Shader Editor</h3>
@@ -715,6 +722,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom"});</script>
 
 
 
