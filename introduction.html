@@ -197,7 +197,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#workspaces" id="toc-workspaces" class="nav-link active" data-scroll-target="#workspaces">Workspaces</a>
   <ul class="collapse">
   <li><a href="#the-3d-viewport" id="toc-the-3d-viewport" class="nav-link" data-scroll-target="#the-3d-viewport">The 3D Viewport</a></li>
-  <li><a href="#geometry-nodes-editor" id="toc-geometry-nodes-editor" class="nav-link" data-scroll-target="#geometry-nodes-editor">Geometry Nodes Editor</a></li>
+  </ul></li>
+  <li><a href="#adding-new-objects" id="toc-adding-new-objects" class="nav-link" data-scroll-target="#adding-new-objects">Adding New Objects</a></li>
+  <li><a href="#editing-a-mesh" id="toc-editing-a-mesh" class="nav-link" data-scroll-target="#editing-a-mesh">Editing a Mesh</a></li>
+  <li><a href="#rendering-an-image" id="toc-rendering-an-image" class="nav-link" data-scroll-target="#rendering-an-image">Rendering an Image</a>
+  <ul class="collapse">
+  <li><a href="#what-the-camera-sees" id="toc-what-the-camera-sees" class="nav-link" data-scroll-target="#what-the-camera-sees">What the Camera Sees</a></li>
+  <li><a href="#moving-the-camera" id="toc-moving-the-camera" class="nav-link" data-scroll-target="#moving-the-camera">Moving the Camera</a></li>
   <li><a href="#shader-editor" id="toc-shader-editor" class="nav-link" data-scroll-target="#shader-editor">Shader Editor</a></li>
   </ul></li>
   </ul>
@@ -256,10 +262,54 @@ ul.task-list li input[type="checkbox"] {
 <figcaption class="figure-caption">The axis widget, present in the 3D viewport.</figcaption>
 </figure>
 </div>
+<p>When applying any of the transformations, you can limit them to a single axis. For example you can move the cube just along the X axis, by press <kbd>G</kbd> then <kbd>x</kbd> which will move the cube just along the <code>x</code> axis. The same can be applied to any of the transformations of translating, scaling and rotation to any of the axes. You can transfrorm <em>perpendicular</em> to a particular axis by useing <kbd>G</kbd> then <kbd>Shift</kbd> + <kbd>x</kbd></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/example_transformations.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Example transformations."><video src="images/example_transformations.mp4" class="img-fluid" controls=""></video></a><a href="images/example_transformations.mp4">Video</a></p>
+<figcaption class="figure-caption">Example transformations.</figcaption>
+</figure>
+</div>
 </section>
 </section>
-<section id="geometry-nodes-editor" class="level3">
-<h3 class="anchored" data-anchor-id="geometry-nodes-editor">Geometry Nodes Editor</h3>
+</section>
+<section id="adding-new-objects" class="level2">
+<h2 class="anchored" data-anchor-id="adding-new-objects">Adding New Objects</h2>
+<p>Add new objects in the 3D scene by clicking <kbd>Shift</kbd> + <kbd>A</kbd>, or using the <code>Add</code> menu towards the top of the 3D viewport. You can then select and transform these objects.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/blender-add_objects.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Adding new objects to the 3D scene."><video src="images/blender-add_objects.mp4" class="img-fluid" controls=""></video></a><a href="images/blender-add_objects.mp4">Video</a></p>
+<figcaption class="figure-caption">Adding new objects to the 3D scene.</figcaption>
+</figure>
+</div>
+</section>
+<section id="editing-a-mesh" class="level2">
+<h2 class="anchored" data-anchor-id="editing-a-mesh">Editing a Mesh</h2>
+<p>You can switch to <code>Edit Mode</code> with your mouse in the 3D viewport by clicking <kbd>Tab</kbd> or by chaning it in the top left corner. While in edit mode, you can see all of the vertices and edges of an object, and you can physically edit these parts of the mesh to create a new 3D mesh.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/blender_edit_mode.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Example of editing meshes in edit mode."><video src="images/blender_edit_mode.mp4" class="img-fluid" controls=""></video></a><a href="images/blender_edit_mode.mp4">Video</a></p>
+<figcaption class="figure-caption">Example of editing meshes in edit mode.</figcaption>
+</figure>
+</div>
+</section>
+<section id="rendering-an-image" class="level2">
+<h2 class="anchored" data-anchor-id="rendering-an-image">Rendering an Image</h2>
+<p>Blender doesn’t render whatever you are currently seeing. Blender will render using the dedicated <code>Camera</code> object that is present inside of the 3D scene.</p>
+<section id="what-the-camera-sees" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-camera-sees">What the Camera Sees</h3>
+<p>You can move this camera around by clicking on it and applying transformations like any other object. To preview what the camera is viewing. you can click on the cmaera widget icon on the top right of the 3D viewport.</p>
+<p>To render an image you can use the <code>Render</code> tab on the top right, or click <kbd>F12</kbd> as the keyboard shortcut. Only once you click render, will Blender properly calculate all of the requried lighting of the scene and produce a rendered image. You can then save this image as a <code>.png</code> or other image format.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/blender_camera_render.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Rendering an image."><video src="images/blender_camera_render.mp4" class="img-fluid" controls=""></video></a><a href="images/blender_camera_render.mp4">Video</a></p>
+<figcaption class="figure-caption">Rendering an image.</figcaption>
+</figure>
+</div>
+</section>
+<section id="moving-the-camera" class="level3">
+<h3 class="anchored" data-anchor-id="moving-the-camera">Moving the Camera</h3>
+<p>Moving and rotating the camera as an object can often be a difficult process. To move the camera around in <code>First Person Mode</code> which most people will be familiar with from playing video games use <kbd>Shift</kbd> + <kbd>`</kbd> (below the escape key on US keyboards) and this will control the camera like a first-person video game. Use <kbd>W</kbd> / <kbd>S</kbd> / <kbd>A</kbd> / <kbd>D</kbd> to move forward, backward, left and right. <kbd>Q</kbd> / <kbd>E</kbd> move up and down. <kbd>Shift</kbd> increase the movement speed. Moving the mouse cursor changes the direction of the camera. Using the scroll-wheel up and down increases or decreases the movement speed of the camera.</p>
+<p><a href="images/blender_camera_movement.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Moving the camera around in first person."><video src="images/blender_camera_movement.mp4" class="img-fluid" controls=""></video></a><a href="images/blender_camera_movement.mp4">Moving the camera around in first person.</a> ### Geometry Nodes Editor</p>
 <p>This is where we edit the node graph for Molecular Nodes. The node graph is a program you create, that is read and executed by Blender from left to right. Each node performs an action on the geometry that is passed into it, and the result of that action is passed out to the right.</p>
 <blockquote class="blockquote">
 <p>Think of it as creating a set of rules for the computer to follow. You define the rules, and the computer can follow those same rules, even if you start with a different data set.</p>
@@ -267,7 +317,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Combining multiple different nodes you can create protein models and complex 3D scenes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/gn-node-graph.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/gn-node-graph.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/gn-node-graph.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/gn-node-graph.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -722,7 +772,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom"});</script>
 
 
 
