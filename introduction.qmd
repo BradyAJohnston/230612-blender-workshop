@@ -36,6 +36,40 @@ In the 3D viewport, much like in real life, there are 3 axes of possible movemen
 
 ![The axis widget, present in the 3D viewport.](images/paste-E98C8D82.png){fig-align="center"}
 
+When applying any of the transformations, you can limit them to a single axis. For example you can move the cube just along the X axis, by press <kbd>G</kbd> then <kbd>x</kbd> which will move the cube just along the `x` axis. The same can be applied to any of the transformations of translating, scaling and rotation to any of the axes. You can transfrorm _perpendicular_ to a particular axis by useing  <kbd>G</kbd> then <kbd>Shift</kbd> + <kbd>x</kbd>
+
+![Example transformations.](images/example_transformations.mp4)
+
+## Adding New Objects
+
+Add new objects in the 3D scene by clicking <kbd>Shift</kbd> + <kbd>A</kbd>, or using the `Add` menu towards the top of the 3D viewport. You can then select and transform these objects.
+
+![Adding new objects to the 3D scene.](images/blender-add_objects.mp4)
+
+## Editing a Mesh
+
+You can switch to `Edit Mode` with your mouse in the 3D viewport by clicking <kbd>Tab</kbd> or by chaning it in the top left corner. While in edit mode, you can see all of the vertices and edges of an object, and you can physically edit these parts of the mesh to create a new 3D mesh.
+
+![Example of editing meshes in edit mode.](images/blender_edit_mode.mp4)
+
+## Rendering an Image
+
+
+Blender doesn't render whatever you are currently seeing. Blender will render using the dedicated `Camera` object that is present inside of the 3D scene.
+
+### What the Camera Sees
+
+You can move this camera around by clicking on it and applying transformations like any other object. To preview what the camera is viewing. you can click on the cmaera widget icon on the top right of the 3D viewport. 
+
+To render an image you can use the `Render` tab on the top right, or click <kbd>F12</kbd> as the keyboard shortcut. Only once you click render, will Blender properly calculate all of the requried lighting of the scene and produce a rendered image. You can then save this image as a `.png` or other image format.
+
+![Rendering an image.](images/blender_camera_render.mp4)
+
+### Moving the Camera
+
+Moving and rotating the camera as an object can often be a difficult process. To move the camera around in `First Person Mode` which most people will be familiar with from playing video games use <kbd>Shift</kbd> + <kbd>`</kbd> (below the escape key on US keyboards) and this will control the camera like a first-person video game. Use  <kbd>W</kbd> / <kbd>S</kbd> / <kbd>A</kbd> / <kbd>D</kbd> to move forward, backward, left and right. <kbd>Q</kbd> / <kbd>E</kbd> move up and down. <kbd>Shift</kbd> increase the movement speed. Moving the mouse cursor changes the direction of the camera. Using the scroll-wheel up and down increases or decreases the movement speed of the camera.
+
+![Moving the camera around in first person.](images/blender_camera_movement.mp4)
 ### Geometry Nodes Editor
 
 This is where we edit the node graph for Molecular Nodes. The node graph is a program you create, that is read and executed by Blender from left to right. Each node performs an action on the geometry that is passed into it, and the result of that action is passed out to the right.

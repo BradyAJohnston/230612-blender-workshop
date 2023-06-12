@@ -5,12 +5,43 @@ format: html
 
 A quick reference document on how to do common operations inside of Molecular Nodes.
 
+# Gotchas
+
+## I can't see the atoms
+
+In rendered view the atoms don't show up!
+
+![](images/CleanShot 2023-06-08 at 16.25.59.png)
+
+The default starting style is `MOL_style_atoms_cycles`. This is chosen because it is the safest option when importing larger structures to not crash your computer. It is not however only visible in the Cycles render engine and not Eevee. You can change the style you are applying to the molecule, or change the render engine to fix it.
+
+![](images/CleanShot 2023-06-08 at 16.29.05@2x.png)
+
+## Changing the colors but it's still grey
+
+If you are changing the colour of the molecule but it still appears gray, you are likely still in 3D view instead of rendered view.
+
+![](images/CleanShot 2023-06-08 at 16.31.05.png)
+
+![](images/CleanShot 2023-06-08 at 16.31.27@2x.png)
+
+# Import
+
+## Import from the PDB
+
+End the PDB ID and download. Options for removing the solvent from the structure on import (any potential water atoms), aligning the structure to the world origin, importing bond information and setting a starting default style.
+
+![](images/CleanShot 2023-06-08 at 16.23.43@2x.png)
+
 # Styles
+
 ## Combine 2 different Styles
 
 Apply the separate styles in a separate branch of the node tree. Combine the resulting styles with `Join Geometry` node and use the result of this.
 
 ![](images/CleanShot%202023-06-08%20at%2011.51.26@2x.png)
+
+![](images/CleanShot%202023-06-08%20at%2016.13.45@2x.png)
 
 A different selection can be used on each style, with the style only being applied to the given selection for each branch of the node tree.
 
@@ -20,11 +51,12 @@ A different selection can be used on each style, with the style only being appli
 
 The same distance measurements from the `Geometry Proximity` node can used in a `Compare` node to apply a distance cutoff. In this example the distance cutoff is `0.8` and the output is a boolean selection. This boolean selection can then be used for the surface style, and the inverse through the *Not* `Boolean Math` node is used for the ribbon style.
 
-![](images/CleanShot 2023-06-08 at 12.20.35@2x.png)
+![](images/CleanShot%202023-06-08%20at%2012.20.35@2x.png)
 
-![](images/CleanShot 2023-06-08 at 12.21.05@2x.png)
+![](images/CleanShot%202023-06-08%20at%2012.21.05@2x.png)
 
 # Color By
+
 ## Manually Colour Chains
 
 Cartoons and ribbons take their colours from the alpha carbon atoms. To colour secondary structure you can just set the colour of the carbon atoms using `MOL_color_set_common` which is in the starting node tree.
@@ -54,4 +86,3 @@ You can measure the distance from each atom to a particular object using the `Ob
 The closer atoms to Suzanne are colored green, and the ones that are further away are colored red. As you move around Suzanne, the colors of the atoms are updated.
 
 ![](images/CleanShot%202023-06-08%20at%2012.10.37@2x.png)
-
