@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-99.9.9">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,8 +60,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-submit-button-title": "Submit"
   }
 }</script>
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
@@ -84,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Workshop</a></li><li class="breadcrumb-item"><a href="./molecular-nodes.html">3. Molecular Nodes</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -265,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The data flows like a river, along the green noodles of the node graph. There must be only 1 final output. If you are using the molecular data, then there must also be a single input.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/CleanShot 2023-06-11 at 15.54.55@2x.png" class="lightbox" title="Example node tree, demonstrating the flow of information through the nodes." data-gallery="quarto-lightbox-gallery-3"><img src="images/CleanShot 2023-06-11 at 15.54.55@2x.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/CleanShot 2023-06-11 at 15.54.55@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Example node tree, demonstrating the flow of information through the nodes."><img src="images/CleanShot 2023-06-11 at 15.54.55@2x.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Example node tree, demonstrating the flow of information through the nodes.</figcaption>
 </figure>
 </div>
@@ -285,7 +284,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/mn-gn-workspace.png" class="lightbox" title="Screenshot of the Geometry Nodes workspace." data-gallery="quarto-lightbox-gallery-4"><img src="images/mn-gn-workspace.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/mn-gn-workspace.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Screenshot of the Geometry Nodes workspace."><img src="images/mn-gn-workspace.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Screenshot of the Geometry Nodes workspace.</figcaption>
 </figure>
 </div>
@@ -324,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The node graph in between can be as complex as you want to make it, as long as there is a continuous connection to the output of the geometry, it should produce a result.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/CleanShot 2023-06-11 at 15.57.33@2x.png" class="lightbox" title="An example of a more complex node graph, with multiple branches that diverge and come back together." data-gallery="quarto-lightbox-gallery-6"><img src="images/CleanShot 2023-06-11 at 15.57.33@2x.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/CleanShot 2023-06-11 at 15.57.33@2x.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="An example of a more complex node graph, with multiple branches that diverge and come back together."><img src="images/CleanShot 2023-06-11 at 15.57.33@2x.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">An example of a more complex node graph, with multiple branches that diverge and come back together.</figcaption>
 </figure>
 </div>
@@ -344,13 +343,13 @@ ul.task-list li input[type="checkbox"] {
 <p>The resulting node tree will wiggle the AA based on the parameters as the value goes from 0 to 1. The animation will perfectly loop from values 0 to 1. Try changing the amplitude of the wiggle, or the frame range for the animate value node to see how it changes the final animation.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/mn-wiggle-example.gif" class="lightbox" title="Quickly adding life to a crystal structure." data-gallery="quarto-lightbox-gallery-7"><img src="images/mn-wiggle-example.gif" class="img-fluid figure-img" alt="A gif showing amino acids wiggling and moving about as part of a protein cystral structure. Their movement is scaled based on their experimentally determined B-factor."></a></p>
+<p><a href="images/mn-wiggle-example.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Quickly adding life to a crystal structure."><img src="images/mn-wiggle-example.gif" class="img-fluid figure-img" alt="A gif showing amino acids wiggling and moving about as part of a protein cystral structure. Their movement is scaled based on their experimentally determined B-factor."></a></p>
 <figcaption class="figure-caption">Quickly adding life to a crystal structure.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/mn-wiggle-nodes.png" class="lightbox" title="The nodes used in the wiggle animation above." data-gallery="quarto-lightbox-gallery-8"><img src="images/mn-wiggle-nodes.png" class="img-fluid figure-img" alt="A screenshot of some geometry nodes inside of Blender. The major nodes pictured are 'MOL_style_colour', 'MOL_animate_res_wiggle' and 'MOL_style_ball_and_stick' which result in an animation of amino acids wiggling about inside of a protein structure."></a></p>
+<p><a href="images/mn-wiggle-nodes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="The nodes used in the wiggle animation above."><img src="images/mn-wiggle-nodes.png" class="img-fluid figure-img" alt="A screenshot of some geometry nodes inside of Blender. The major nodes pictured are 'MOL_style_colour', 'MOL_animate_res_wiggle' and 'MOL_style_ball_and_stick' which result in an animation of amino acids wiggling about inside of a protein structure."></a></p>
 <figcaption class="figure-caption">The nodes used in the wiggle animation above.</figcaption>
 </figure>
 </div>
@@ -400,33 +399,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -495,15 +467,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -582,9 +552,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -594,17 +565,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -617,61 +579,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    if (id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
-        }
-        return container.innerHTML
-      } else {
-        return note.innerHTML;
-      }
-    } else {
-      return note.innerHTML;
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      try { hash = new URL(url).hash; } catch {}
-      const id = hash.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note !== null) {
-        try {
-          const html = processXRef(id, note);
-          instance.setContent(html);
-        } finally {
-          instance.enable();
-          instance.show();
-        }
-      } else {
-        // See if we can fetch this
-        fetch(url.split('#')[0])
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.getElementById(id);
-          console.log(htmlDoc.body.innerHTML);
-          if (note !== null) {
-            const html = processXRef(id, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -800,7 +707,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 

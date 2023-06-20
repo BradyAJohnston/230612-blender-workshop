@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/animation.html</loc>
-    <lastmod>2023-06-12T08:21:49.800Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/exporting-importing.html</loc>
-    <lastmod>2023-06-12T08:21:50.245Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/molecular-nodes.html</loc>
-    <lastmod>2023-06-12T08:21:50.779Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/index.html</loc>
-    <lastmod>2023-06-12T08:21:51.139Z</lastmod>
-  </url>
-  <url>
     <loc>https://BradyAJohnston.github.io/230612-blender-workshop/about.html</loc>
-    <lastmod>2023-06-12T08:21:51.466Z</lastmod>
+    <lastmod>2023-06-20T13:10:47.507Z</lastmod>
   </url>
   <url>
-    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/quick-reference.html</loc>
-    <lastmod>2023-06-12T08:21:51.876Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/introduction.html</loc>
-    <lastmod>2023-06-12T08:21:52.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/installation.html</loc>
-    <lastmod>2023-06-12T08:21:52.726Z</lastmod>
+    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/animation.html</loc>
+    <lastmod>2023-06-20T13:10:47.957Z</lastmod>
   </url>
   <url>
     <loc>https://BradyAJohnston.github.io/230612-blender-workshop/complex-scene.html</loc>
-    <lastmod>2023-06-12T08:21:53.054Z</lastmod>
+    <lastmod>2023-06-20T13:10:48.378Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/exporting-importing.html</loc>
+    <lastmod>2023-06-20T13:10:48.867Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/index.html</loc>
+    <lastmod>2023-06-20T13:10:49.374Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/installation.html</loc>
+    <lastmod>2023-06-20T13:10:49.933Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/introduction.html</loc>
+    <lastmod>2023-06-20T13:10:50.515Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/molecular-nodes.html</loc>
+    <lastmod>2023-06-20T13:10:51.084Z</lastmod>
   </url>
   <url>
     <loc>https://BradyAJohnston.github.io/230612-blender-workshop/online-tutorials.html</loc>
-    <lastmod>2023-06-12T08:21:53.389Z</lastmod>
+    <lastmod>2023-06-20T13:10:51.514Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BradyAJohnston.github.io/230612-blender-workshop/quick-reference.html</loc>
+    <lastmod>2023-06-20T13:10:52.108Z</lastmod>
   </url>
 </urlset>
